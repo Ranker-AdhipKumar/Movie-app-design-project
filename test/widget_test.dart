@@ -1,14 +1,48 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:movie_app/main.dart';
 import 'package:movie_app/repositories/movie_repository.dart';
+import 'package:movie_app/widgets/rating_badge.dart';
+import 'package:movie_app/widgets/category_chip_bar.dart';
 
 void main() {
-  testWidgets('MovieApp launches and renders Home Screen successfully', (WidgetTester tester) async {
+  testWidgets('RatingBadge renders rating score correctly', (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: Scaffold(
+          body: RatingBadge(rating: 8.4),
+        ),
+      ),
+    );
+
+    expect(find.text('8.4'), findsOneWidget);
+    expect(find.byIcon(Icons.star_rounded), findsOneWidget);
+  });
+
+  testWidgets('CategoryChipBar displays categories', (WidgetTester tester) async {
+    String selected = 'All';
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: CategoryChipBar(
+            selectedCategory: selected,
+            onCategorySelected: (cat) => selected = cat,
+          ),
+        ),
+      ),
+    );
+
+    expect(find.text('All'), findsOneWidget);
+    expect(find.text('Action'), findsOneWidget);
+  });
+
+  testWidgets('MovieApp mounts and unmounts cleanly', (WidgetTester tester) async {
     final repository = MovieRepository();
 
     await tester.pumpWidget(MovieApp(repository: repository));
-
-    // Verify app title or branding is in widget tree
     expect(find.text('FlickVault'), findsOneWidget);
+
+    // Unmount to cancel any active timers cleanly
+    await tester.pumpWidget(const SizedBox.shrink());
   });
 }

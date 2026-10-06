@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
 import '../config/api_config.dart';
+import '../models/cast_member.dart';
 import '../models/movie.dart';
 
 /// Exception thrown when TMDB API call fails.
