@@ -30,6 +30,20 @@ jobs:
       - name: Recreate Android Platform Files
         run: |
           flutter create . --platforms=android --org com.example --project-name movie_app
+          
+          # Upgrade Gradle wrapper to 8.5 (compatible with AGP 8.3+)
+          python3 -c "
+          p = 'android/gradle/wrapper/gradle-wrapper.properties'
+          with open(p, 'r') as f:
+              c = f.read()
+          import re
+          c = re.sub(r'gradle-[\d\.]+-all\.zip', 'gradle-8.5-all.zip', c)
+          c = re.sub(r'gradle-[\d\.]+-bin\.zip', 'gradle-8.5-all.zip', c)
+          with open(p, 'w') as f:
+              f.write(c)
+          "
+          
+          # Ensure Internet permission is in AndroidManifest.xml
           python3 -c "
           p = 'android/app/src/main/AndroidManifest.xml'
           with open(p, 'r') as f:
