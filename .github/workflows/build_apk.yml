@@ -29,9 +29,16 @@ jobs:
 
       - name: Recreate Android Platform Files
         run: |
-          flutter create . --platforms=android --org com.example
-          # Ensure Internet permission is in AndroidManifest.xml
-          sed -i '/<application/i \    <uses-permission android:name="android.permission.INTERNET"/>\n    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>' android/app/src/main/AndroidManifest.xml
+          flutter create . --platforms=android --org com.example --project-name movie_app
+          python3 -c "
+          p = 'android/app/src/main/AndroidManifest.xml'
+          with open(p, 'r') as f:
+              c = f.read()
+          if 'android.permission.INTERNET' not in c:
+              c = c.replace('<application', '    <uses-permission android:name=\"android.permission.INTERNET\"/>\n    <uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>\n    <application')
+              with open(p, 'w') as f:
+                  f.write(c)
+          "
 
       - name: Get Dependencies
         run: flutter pub get
