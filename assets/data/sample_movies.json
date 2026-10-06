@@ -1,0 +1,322 @@
+[
+  {
+    "id": 27205,
+    "title": "Inception",
+    "tagline": "Your mind is the scene of the crime.",
+    "overview": "Cobb, a skilled thief who steals corporate secrets through use of dream-sharing technology, is offered a chance to have his criminal history erased as payment for the implantation of another person's idea into a target's subconscious.",
+    "posterPath": "https://image.tmdb.org/t/p/w500/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg",
+    "backdropPath": "https://image.tmdb.org/t/p/w1280/8ZTVqvKDQ8emSGUEMjsS4yHAwrp.jpg",
+    "voteAverage": 8.4,
+    "voteCount": 35420,
+    "releaseDate": "2010-07-16",
+    "runtime": 148,
+    "genres": ["Action", "Sci-Fi", "Adventure"],
+    "language": "English",
+    "certification": "PG-13",
+    "cast": [
+      {
+        "name": "Leonardo DiCaprio",
+        "character": "Dom Cobb",
+        "profilePath": "https://image.tmdb.org/t/p/w185/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg"
+      },
+      {
+        "name": "Joseph Gordon-Levitt",
+        "character": "Arthur",
+        "profilePath": "https://image.tmdb.org/t/p/w185/dhv9f3A7vEa4nE2G90E4s8D.jpg"
+      },
+      {
+        "name": "Elliot Page",
+        "character": "Ariadne",
+        "profilePath": "https://image.tmdb.org/t/p/w185/tp15h5Jm0c2G8p1d2h1k4j.jpg"
+      },
+      {
+        "name": "Tom Hardy",
+        "character": "Eames",
+        "profilePath": "https://image.tmdb.org/t/p/w185/d8pqFgAdJ0f1w5b1g4h.jpg"
+      }
+    ]
+  },
+  {
+    "id": 157336,
+    "title": "Interstellar",
+    "tagline": "Mankind was born on Earth. It was never meant to die here.",
+    "overview": "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
+    "posterPath": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    "backdropPath": "https://image.tmdb.org/t/p/w1280/xJHokMbljvjADYdit5fK5VQsXEG.jpg",
+    "voteAverage": 8.7,
+    "voteCount": 34100,
+    "releaseDate": "2014-11-07",
+    "runtime": 169,
+    "genres": ["Sci-Fi", "Drama", "Adventure"],
+    "language": "English",
+    "certification": "PG-13",
+    "cast": [
+      {
+        "name": "Matthew McConaughey",
+        "character": "Joseph Cooper",
+        "profilePath": "https://image.tmdb.org/t/p/w185/sY2mwpafcwqyuo2q4vsG9NuIJ1V.jpg"
+      },
+      {
+        "name": "Anne Hathaway",
+        "character": "Dr. Amelia Brand",
+        "profilePath": "https://image.tmdb.org/t/p/w185/tL6II0hg0758vA.jpg"
+      },
+      {
+        "name": "Jessica Chastain",
+        "character": "Murphy Cooper",
+        "profilePath": "https://image.tmdb.org/t/p/w185/lodkjf983jkl.jpg"
+      }
+    ]
+  },
+  {
+    "id": 155,
+    "title": "The Dark Knight",
+    "tagline": "Why so serious?",
+    "overview": "Batman raises the stakes in his war on crime. With the help of allies Lt. Jim Gordon and DA Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.",
+    "posterPath": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    "backdropPath": "https://image.tmdb.org/t/p/w1280/dqK9Hag1054tghRQSqLSPoYqA5P.jpg",
+    "voteAverage": 9.0,
+    "voteCount": 31500,
+    "releaseDate": "2008-07-18",
+    "runtime": 152,
+    "genres": ["Action", "Crime", "Drama"],
+    "language": "English",
+    "certification": "PG-13",
+    "cast": [
+      {
+        "name": "Christian Bale",
+        "character": "Bruce Wayne / Batman",
+        "profilePath": "https://image.tmdb.org/t/p/w185/b7fTC9WFkgq6E4CrDhwGSpB9Nm3.jpg"
+      },
+      {
+        "name": "Heath Ledger",
+        "character": "Joker",
+        "profilePath": "https://image.tmdb.org/t/p/w185/5Y9HnYYa9jF4NuH9umF45i.jpg"
+      },
+      {
+        "name": "Gary Oldman",
+        "character": "James Gordon",
+        "profilePath": "https://image.tmdb.org/t/p/w185/2v9FsB9Fq5Y6HnYYa.jpg"
+      }
+    ]
+  },
+  {
+    "id": 693134,
+    "title": "Dune: Part Two",
+    "tagline": "Long live the fighters.",
+    "overview": "Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a warpath of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, Paul endeavors to prevent a terrible future only he can foresee.",
+    "posterPath": "https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg",
+    "backdropPath": "https://image.tmdb.org/t/p/w1280/xOMo8BRK7PfcJv9JCnx7s5hj0x2.jpg",
+    "voteAverage": 8.3,
+    "voteCount": 5120,
+    "releaseDate": "2024-03-01",
+    "runtime": 166,
+    "genres": ["Sci-Fi", "Adventure", "Action"],
+    "language": "English",
+    "certification": "PG-13",
+    "cast": [
+      {
+        "name": "Timothée Chalamet",
+        "character": "Paul Atreides",
+        "profilePath": "https://image.tmdb.org/t/p/w185/BE2sdjpgsa83.jpg"
+      },
+      {
+        "name": "Zendaya",
+        "character": "Chani",
+        "profilePath": "https://image.tmdb.org/t/p/w185/r3A7vEf90.jpg"
+      },
+      {
+        "name": "Rebecca Ferguson",
+        "character": "Lady Jessica",
+        "profilePath": "https://image.tmdb.org/t/p/w185/ferguson.jpg"
+      }
+    ]
+  },
+  {
+    "id": 569094,
+    "title": "Spider-Man: Across the Spider-Verse",
+    "tagline": "It's how you wear the mask that matters.",
+    "overview": "After reuniting with Gwen Stacy, Brooklyn’s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society, a team of Spider-People charged with protecting the Multiverse’s very existence. But when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders.",
+    "posterPath": "https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+    "backdropPath": "https://image.tmdb.org/t/p/w1280/4HodYYKEIsGOdinkGi2Ucz6X9i0.jpg",
+    "voteAverage": 8.4,
+    "voteCount": 6700,
+    "releaseDate": "2023-06-02",
+    "runtime": 140,
+    "genres": ["Animation", "Action", "Adventure"],
+    "language": "English",
+    "certification": "PG",
+    "cast": [
+      {
+        "name": "Shameik Moore",
+        "character": "Miles Morales (voice)",
+        "profilePath": "https://image.tmdb.org/t/p/w185/moore.jpg"
+      },
+      {
+        "name": "Hailee Steinfeld",
+        "character": "Gwen Stacy (voice)",
+        "profilePath": "https://image.tmdb.org/t/p/w185/steinfeld.jpg"
+      },
+      {
+        "name": "Oscar Isaac",
+        "character": "Miguel O'Hara (voice)",
+        "profilePath": "https://image.tmdb.org/t/p/w185/isaac.jpg"
+      }
+    ]
+  },
+  {
+    "id": 872585,
+    "title": "Oppenheimer",
+    "tagline": "The world forever changes.",
+    "overview": "The story of J. Robert Oppenheimer’s role in the development of the atomic bomb during World War II.",
+    "posterPath": "https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+    "backdropPath": "https://image.tmdb.org/t/p/w1280/rLb2cwF3Pazuxaj0sRXQ037tGI1.jpg",
+    "voteAverage": 8.1,
+    "voteCount": 8450,
+    "releaseDate": "2023-07-21",
+    "runtime": 180,
+    "genres": ["Drama", "History", "Biography"],
+    "language": "English",
+    "certification": "R",
+    "cast": [
+      {
+        "name": "Cillian Murphy",
+        "character": "J. Robert Oppenheimer",
+        "profilePath": "https://image.tmdb.org/t/p/w185/murphy.jpg"
+      },
+      {
+        "name": "Emily Blunt",
+        "character": "Katherine Oppenheimer",
+        "profilePath": "https://image.tmdb.org/t/p/w185/blunt.jpg"
+      },
+      {
+        "name": "Matt Damon",
+        "character": "Leslie Groves",
+        "profilePath": "https://image.tmdb.org/t/p/w185/damon.jpg"
+      }
+    ]
+  },
+  {
+    "id": 299534,
+    "title": "Avengers: Endgame",
+    "tagline": "Part of the journey is the end.",
+    "overview": "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+    "posterPath": "https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+    "backdropPath": "https://image.tmdb.org/t/p/w1280/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+    "voteAverage": 8.3,
+    "voteCount": 24890,
+    "releaseDate": "2019-04-26",
+    "runtime": 181,
+    "genres": ["Action", "Sci-Fi", "Adventure"],
+    "language": "English",
+    "certification": "PG-13",
+    "cast": [
+      {
+        "name": "Robert Downey Jr.",
+        "character": "Tony Stark / Iron Man",
+        "profilePath": "https://image.tmdb.org/t/p/w185/rdj.jpg"
+      },
+      {
+        "name": "Chris Evans",
+        "character": "Steve Rogers / Captain America",
+        "profilePath": "https://image.tmdb.org/t/p/w185/evans.jpg"
+      },
+      {
+        "name": "Scarlett Johansson",
+        "character": "Natasha Romanoff / Black Widow",
+        "profilePath": "https://image.tmdb.org/t/p/w185/scarjo.jpg"
+      }
+    ]
+  },
+  {
+    "id": 496243,
+    "title": "Parasite",
+    "tagline": "Act like you own the place.",
+    "overview": "All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident.",
+    "posterPath": "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+    "backdropPath": "https://image.tmdb.org/t/p/w1280/hiKmpZMGZsrkA3cdce8a7Dpos1j.jpg",
+    "voteAverage": 8.5,
+    "voteCount": 17890,
+    "releaseDate": "2019-05-30",
+    "runtime": 132,
+    "genres": ["Comedy", "Thriller", "Drama"],
+    "language": "Korean",
+    "certification": "R",
+    "cast": [
+      {
+        "name": "Song Kang-ho",
+        "character": "Kim Ki-taek",
+        "profilePath": "https://image.tmdb.org/t/p/w185/song.jpg"
+      },
+      {
+        "name": "Lee Sun-kyun",
+        "character": "Park Dong-ik",
+        "profilePath": "https://image.tmdb.org/t/p/w185/lee.jpg"
+      },
+      {
+        "name": "Cho Yeo-jeong",
+        "character": "Park Yeon-gyo",
+        "profilePath": "https://image.tmdb.org/t/p/w185/cho.jpg"
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "title": "Spirited Away",
+    "tagline": "The tunnel led to a mysterious world.",
+    "overview": "A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family.",
+    "posterPath": "https://image.tmdb.org/t/p/w500/393rws24P92fevQUIMYejpeaO8b.jpg",
+    "backdropPath": "https://image.tmdb.org/t/p/w1280/bXAVve518wS5V8Q1x2Q6l1sXGvS.jpg",
+    "voteAverage": 8.5,
+    "voteCount": 16200,
+    "releaseDate": "2001-07-20",
+    "runtime": 125,
+    "genres": ["Animation", "Family", "Fantasy"],
+    "language": "Japanese",
+    "certification": "PG",
+    "cast": [
+      {
+        "name": "Rumi Hiiragi",
+        "character": "Chihiro Ogino (voice)",
+        "profilePath": "https://image.tmdb.org/t/p/w185/rumi.jpg"
+      },
+      {
+        "name": "Miyu Irino",
+        "character": "Haku (voice)",
+        "profilePath": "https://image.tmdb.org/t/p/w185/irino.jpg"
+      }
+    ]
+  },
+  {
+    "id": 680,
+    "title": "Pulp Fiction",
+    "tagline": "Just because you are a character doesn't mean you have character.",
+    "overview": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time.",
+    "posterPath": "https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
+    "backdropPath": "https://image.tmdb.org/t/p/w1280/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+    "voteAverage": 8.5,
+    "voteCount": 27230,
+    "releaseDate": "1994-09-10",
+    "runtime": 154,
+    "genres": ["Thriller", "Crime", "Drama"],
+    "language": "English",
+    "certification": "R",
+    "cast": [
+      {
+        "name": "John Travolta",
+        "character": "Vincent Vega",
+        "profilePath": "https://image.tmdb.org/t/p/w185/travolta.jpg"
+      },
+      {
+        "name": "Samuel L. Jackson",
+        "character": "Jules Winnfield",
+        "profilePath": "https://image.tmdb.org/t/p/w185/jackson.jpg"
+      },
+      {
+        "name": "Uma Thurman",
+        "character": "Mia Wallace",
+        "profilePath": "https://image.tmdb.org/t/p/w185/thurman.jpg"
+      }
+    ]
+  }
+]
