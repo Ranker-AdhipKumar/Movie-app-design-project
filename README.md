@@ -2,6 +2,21 @@
 > **GDG & DCS Recruitment Task Submission**  
 > Built with Flutter & Dart for Android & iOS. Inspired by [Dribbble: Movie Application 03](https://dribbble.com/shots/6444124-Movie-application-03).
 
+[![Flutter](https://img.shields.io/badge/Flutter-3.24.3-02569B?logo=flutter&logoColor=white)](https://flutter.dev)
+[![Dart](https://img.shields.io/badge/Dart-3.5-0175C2?logo=dart&logoColor=white)](https://dart.dev)
+[![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-3DDC84?logo=android&logoColor=white)](https://flutter.dev)
+[![API](https://img.shields.io/badge/TMDB-API%20v3-01D277?logo=themoviedatabase&logoColor=white)](https://developer.themoviedb.org)
+[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen)](https://github.com/Ranker-AdhipKumar/Movie-app-design-project/actions)
+
+---
+
+## 📸 App Screenshots
+
+| 🏠 Home Screen & Carousel | 📽️ Movie Detail & Cast | 🔍 Live TMDB Search |
+| :---: | :---: | :---: |
+| <img src="screenshots/01_home_screen.jpg" width="280" alt="Home Screen" /> | <img src="screenshots/02_movie_detail.jpg" width="280" alt="Movie Detail Screen" /> | <img src="screenshots/03_search_screen.jpg" width="280" alt="Search Screen" /> |
+| *Featured carousel, genre chips & grid* | *Backdrop hero, metadata & cast* | *Debounced search & suggestions* |
+
 ---
 
 ## 🌟 Overview
@@ -64,10 +79,26 @@ The project demonstrates:
 
 ---
 
+## 🏷️ GitHub Repository Metadata (About Section)
+
+To configure your GitHub repository **About** settings:
+
+- **Description**:
+  > A sleek, dark-themed cinema browsing Flutter mobile application with TMDB API integration, offline sample dataset, featured trending carousel, category filtering, and movie details. Built for GDG & DCS Recruitment Task.
+
+- **Topics / Tags**:
+  `flutter` `dart` `mobile-app` `movie-app` `tmdb-api` `ui-ux` `gdg` `cross-platform` `android` `clean-architecture` `dribbble-design` `cinema`
+
+---
+
 ## 🏗️ Project Architecture
 
 ```
 Movie_App_Design_Project/
+├── screenshots/                     # UI screenshots of the working application
+│   ├── 01_home_screen.jpg
+│   ├── 02_movie_detail.jpg
+│   └── 03_search_screen.jpg
 ├── assets/
 │   └── data/
 │       └── sample_movies.json       # 10+ rich offline movie records with cast & media
@@ -117,7 +148,7 @@ Movie_App_Design_Project/
 
 ### Step 1: Clone the repository
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/Ranker-AdhipKumar/Movie-app-design-project.git
 cd Movie_App_Design_Project
 ```
 
@@ -173,7 +204,7 @@ build/app/outputs/flutter-apk/app-release.apk
 - [x] **Data Handling**: 10+ sample movies via JSON + TMDB live API endpoints with error handling.
 - [x] **Security**: API key decoupled from UI code with in-app configuration.
 - [x] **Clean Code**: Documented, typed Dart code following Flutter lints.
-- [x] **APK Build**: Ready for upload to Google Drive.
+- [x] **APK Build**: Automated release build via GitHub Actions workflow.
 
 ---
 
