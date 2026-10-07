@@ -8,10 +8,12 @@
 [![API](https://img.shields.io/badge/TMDB-API%20v3-01D277?logo=themoviedatabase&logoColor=white)](https://developer.themoviedb.org)
 [![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen)](https://github.com/Ranker-AdhipKumar/Movie-app-design-project/actions)
 
-[![Direct Download APK](https://img.shields.io/badge/Download-Release%20APK%20(Google%20Drive)-FFB800?style=for-the-badge&logo=google-drive&logoColor=black)](https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing)
+[![Download from GitHub](https://img.shields.io/badge/Download%20APK-GitHub%20Repo%20(Direct)-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ranker-AdhipKumar/Movie-app-design-project/raw/main/Direct_apk_file/app-release.apk)
+[![Direct Download APK](https://img.shields.io/badge/Download%20APK-Google%20Drive-FFB800?style=for-the-badge&logo=google-drive&logoColor=black)](https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing)
 
-> 📲 **Want to try the app immediately?**  
-> **[Click here to directly download the Demo APK](https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing)** *(Google Drive Link)*.
+> 📲 **Directly Download the Demo APK:**  
+> - ⚡ **[Download from GitHub Repo (Direct_apk_file/app-release.apk)](https://github.com/Ranker-AdhipKumar/Movie-app-design-project/raw/main/Direct_apk_file/app-release.apk)**  
+> - ☁️ **[Download from Google Drive](https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing)**  
 
 ---
 
@@ -121,6 +123,8 @@ The app enforces a clean authentication gate before accessing the movie catalog:
 
 ```
 Movie_App_Design_Project/
+├── Direct_apk_file/
+│   └── app-release.apk              # Directly downloadable release APK in repository
 ├── screenshots/                     # UI screenshots of the working application
 │   ├── 00_login_screen.jpg          # Login & registration screen preview
 │   ├── 01_home_screen.jpg           # Home screen & featured carousel preview
@@ -206,15 +210,28 @@ flutter test
 
 ## 📥 Direct APK Download & Installation
 
-You can directly download and install the ready-to-use demo APK:
+You can directly download and install the ready-to-use demo APK via either method:
 
-[![Download APK Button](https://img.shields.io/badge/📥%20Download-FlickVault%20APK%20(Google%20Drive)-FFB800?style=for-the-badge&logo=google-drive&logoColor=black)](https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing)
+### ⚡ Option 1: Direct from this GitHub Repository
+[![Download from GitHub](https://img.shields.io/badge/📥%20Download-From%20GitHub%20(Direct_apk_file)-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ranker-AdhipKumar/Movie-app-design-project/raw/main/Direct_apk_file/app-release.apk)
+
+🔗 **Direct GitHub Download Link**:  
+[https://github.com/Ranker-AdhipKumar/Movie-app-design-project/raw/main/Direct_apk_file/app-release.apk](https://github.com/Ranker-AdhipKumar/Movie-app-design-project/raw/main/Direct_apk_file/app-release.apk)
+
+*(Stored directly in the `Direct_apk_file/app-release.apk` folder on GitHub)*
+
+---
+
+### ☁️ Option 2: Download from Google Drive
+[![Download APK Button](https://img.shields.io/badge/📥%20Download-From%20Google%20Drive-FFB800?style=for-the-badge&logo=google-drive&logoColor=black)](https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing)
 
 🔗 **Direct Google Drive Link**:  
 [https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing](https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing)
 
+---
+
 ### Quick Installation Guide:
-1. Tap the download link above and save `app-release.apk` to your Android device.
+1. Tap either download link above and save `app-release.apk` to your Android device.
 2. Locate the file in your device's **Downloads** folder and tap on it.
 3. If prompted by Android, enable **"Allow from this source"** or **"Install unknown apps"**.
 4. Tap **Install** and launch **FlickVault** to test the app!
