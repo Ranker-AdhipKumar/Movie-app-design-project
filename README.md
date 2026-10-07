@@ -8,6 +8,11 @@
 [![API](https://img.shields.io/badge/TMDB-API%20v3-01D277?logo=themoviedatabase&logoColor=white)](https://developer.themoviedb.org)
 [![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen)](https://github.com/Ranker-AdhipKumar/Movie-app-design-project/actions)
 
+[![Direct Download APK](https://img.shields.io/badge/Download-Release%20APK%20(Google%20Drive)-FFB800?style=for-the-badge&logo=google-drive&logoColor=black)](https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing)
+
+> 📲 **Want to try the app immediately?**  
+> **[Click here to directly download the Demo APK](https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing)** *(Google Drive Link)*.
+
 ---
 
 ## 📸 App Screenshots
@@ -181,7 +186,24 @@ flutter test
 
 ---
 
-## 📦 Building the Android APK
+## 📥 Direct APK Download & Installation
+
+You can directly download and install the ready-to-use demo APK:
+
+[![Download APK Button](https://img.shields.io/badge/📥%20Download-FlickVault%20APK%20(Google%20Drive)-FFB800?style=for-the-badge&logo=google-drive&logoColor=black)](https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing)
+
+🔗 **Direct Google Drive Link**:  
+[https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing](https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing)
+
+### Quick Installation Guide:
+1. Tap the download link above and save `app-release.apk` to your Android device.
+2. Locate the file in your device's **Downloads** folder and tap on it.
+3. If prompted by Android, enable **"Allow from this source"** or **"Install unknown apps"**.
+4. Tap **Install** and launch **FlickVault** to test the app!
+
+---
+
+## 📦 Building the Android APK from Source
 
 To generate a standalone release APK for demo submission:
 ```bash
