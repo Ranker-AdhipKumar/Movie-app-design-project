@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:movie_app/main.dart';
+import 'package:movie_app/repositories/auth_repository.dart';
 import 'package:movie_app/repositories/movie_repository.dart';
 import 'package:movie_app/widgets/rating_badge.dart';
 import 'package:movie_app/widgets/category_chip_bar.dart';
@@ -36,13 +37,21 @@ void main() {
     expect(find.text('Action'), findsOneWidget);
   });
 
-  testWidgets('MovieApp mounts and unmounts cleanly', (WidgetTester tester) async {
-    final repository = MovieRepository();
+  testWidgets('MovieApp launches with LoginScreen when unauthenticated', (WidgetTester tester) async {
+    final movieRepository = MovieRepository();
+    final authRepository = AuthRepository();
 
-    await tester.pumpWidget(MovieApp(repository: repository));
+    await tester.pumpWidget(MovieApp(
+      repository: movieRepository,
+      authRepository: authRepository,
+    ));
+
+    // Initially unauthenticated: shows login branding and buttons
     expect(find.text('FlickVault'), findsOneWidget);
+    expect(find.text('Sign In to FlickVault'), findsOneWidget);
+    expect(find.text('Fill Demo Account (1-Click)'), findsOneWidget);
 
-    // Unmount to cancel any active timers cleanly
+    // Unmount cleanly
     await tester.pumpWidget(const SizedBox.shrink());
   });
 }

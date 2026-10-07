@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../config/app_constants.dart';
 import '../config/app_theme.dart';
 import '../models/movie.dart';
+import '../repositories/auth_repository.dart';
 import '../repositories/movie_repository.dart';
 import '../widgets/category_chip_bar.dart';
 import '../widgets/custom_search_bar.dart';
@@ -17,10 +18,12 @@ import 'settings_screen.dart';
 /// search bar, and grid of movies.
 class HomeScreen extends StatefulWidget {
   final MovieRepository repository;
+  final AuthRepository? authRepository;
 
   const HomeScreen({
     Key? key,
     required this.repository,
+    this.authRepository,
   }) : super(key: key);
 
   @override
@@ -193,12 +196,16 @@ class _HomeScreenState extends State<HomeScreen> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
-                AppConstants.appName,
-                style: TextStyle(
-                  fontSize: 18,
+              Text(
+                widget.authRepository?.currentUser != null
+                    ? 'Hi, ${widget.authRepository!.currentUser!.name}'
+                    : AppConstants.appName,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  letterSpacing: 0.5,
+                  letterSpacing: 0.3,
                 ),
               ),
               Text(
@@ -233,12 +240,98 @@ class _HomeScreenState extends State<HomeScreen> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (_) => SettingsScreen(repository: widget.repository),
+                builder: (_) => SettingsScreen(
+                  repository: widget.repository,
+                  authRepository: widget.authRepository,
+                ),
               ),
             );
           },
         ),
-        const SizedBox(width: 8),
+        if (widget.authRepository?.currentUser != null) ...[
+          PopupMenuButton<String>(
+            tooltip: 'Account Profile',
+            color: AppTheme.surfaceCard,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(14),
+              side: const BorderSide(color: Color(0xFF222638)),
+            ),
+            icon: CircleAvatar(
+              radius: 14,
+              backgroundColor: AppTheme.primary,
+              child: Text(
+                widget.authRepository!.currentUser!.name[0].toUpperCase(),
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            onSelected: (val) {
+              if (val == 'settings') {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => SettingsScreen(
+                      repository: widget.repository,
+                      authRepository: widget.authRepository,
+                    ),
+                  ),
+                );
+              } else if (val == 'logout') {
+                widget.authRepository!.logout();
+              }
+            },
+            itemBuilder: (context) => [
+              PopupMenuItem(
+                enabled: false,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      widget.authRepository!.currentUser!.name,
+                      style: const TextStyle(
+                        color: AppTheme.textPrimary,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                      ),
+                    ),
+                    Text(
+                      widget.authRepository!.currentUser!.email,
+                      style: const TextStyle(
+                        color: AppTheme.textMuted,
+                        fontSize: 11,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const PopupMenuDivider(),
+              const PopupMenuItem(
+                value: 'settings',
+                child: Row(
+                  children: [
+                    Icon(Icons.tune_rounded, size: 18, color: AppTheme.textSecondary),
+                    SizedBox(width: 10),
+                    Text('Settings & API', style: TextStyle(color: AppTheme.textPrimary, fontSize: 13)),
+                  ],
+                ),
+              ),
+              const PopupMenuItem(
+                value: 'logout',
+                child: Row(
+                  children: [
+                    Icon(Icons.logout_rounded, size: 18, color: AppTheme.errorColor),
+                    SizedBox(width: 10),
+                    Text('Sign Out', style: TextStyle(color: AppTheme.errorColor, fontSize: 13)),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ],
+        const SizedBox(width: 6),
       ],
     );
   }

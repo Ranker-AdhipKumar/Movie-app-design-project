@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 import '../config/api_config.dart';
 import '../config/app_constants.dart';
 import '../config/app_theme.dart';
+import '../repositories/auth_repository.dart';
 import '../repositories/movie_repository.dart';
 
 /// Settings and API Configuration screen allowing evaluators to switch data modes
 /// and test custom TMDB API keys without code modification.
 class SettingsScreen extends StatefulWidget {
   final MovieRepository repository;
+  final AuthRepository? authRepository;
 
   const SettingsScreen({
     Key? key,
     required this.repository,
+    this.authRepository,
   }) : super(key: key);
 
   @override
@@ -67,6 +70,102 @@ class _SettingsScreenState extends State<SettingsScreen> {
         padding: const EdgeInsets.all(20),
         physics: const BouncingScrollPhysics(),
         children: [
+          // User Account & Session Card
+          if (widget.authRepository?.currentUser != null) ...[
+            Container(
+              padding: const EdgeInsets.all(18),
+              decoration: BoxDecoration(
+                color: AppTheme.surfaceCard,
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: const Color(0xFF222638), width: 1),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 20,
+                        backgroundColor: AppTheme.primary.withOpacity(0.2),
+                        child: Text(
+                          widget.authRepository!.currentUser!.name[0].toUpperCase(),
+                          style: const TextStyle(
+                            color: AppTheme.primary,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 14),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              widget.authRepository!.currentUser!.name,
+                              style: const TextStyle(
+                                color: AppTheme.textPrimary,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const SizedBox(height: 2),
+                            Text(
+                              widget.authRepository!.currentUser!.email,
+                              style: const TextStyle(
+                                color: AppTheme.textMuted,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                        decoration: BoxDecoration(
+                          color: AppTheme.successColor.withOpacity(0.15),
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(color: AppTheme.successColor.withOpacity(0.3)),
+                        ),
+                        child: const Text(
+                          'Active Session',
+                          style: TextStyle(
+                            color: AppTheme.successColor,
+                            fontSize: 10,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 16),
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlinedButton.icon(
+                      onPressed: () {
+                        widget.authRepository!.logout();
+                        Navigator.pop(context);
+                      },
+                      icon: const Icon(Icons.logout_rounded, color: AppTheme.errorColor, size: 18),
+                      label: const Text(
+                        'Sign Out of FlickVault',
+                        style: TextStyle(color: AppTheme.errorColor, fontSize: 13),
+                      ),
+                      style: OutlinedButton.styleFrom(
+                        side: BorderSide(color: AppTheme.errorColor.withOpacity(0.4)),
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+          ],
+
           // Data Mode Toggle Card
           Container(
             padding: const EdgeInsets.all(18),

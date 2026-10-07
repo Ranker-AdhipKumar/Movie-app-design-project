@@ -17,10 +17,10 @@
 
 ## 📸 App Screenshots
 
-| 🏠 Home Screen & Carousel | 📽️ Movie Detail & Cast | 🔍 Live TMDB Search |
-| :---: | :---: | :---: |
-| <img src="screenshots/01_home_screen.jpg" width="280" alt="Home Screen" /> | <img src="screenshots/02_movie_detail.jpg" width="280" alt="Movie Detail Screen" /> | <img src="screenshots/03_search_screen.jpg" width="280" alt="Search Screen" /> |
-| *Featured carousel, genre chips & grid* | *Backdrop hero, metadata & cast* | *Debounced search & suggestions* |
+| 🔐 Login & Authentication | 🏠 Home Screen & Carousel | 📽️ Movie Detail & Cast | 🔍 Live TMDB Search |
+| :---: | :---: | :---: | :---: |
+| <img src="screenshots/00_login_screen.jpg" width="220" alt="Login Screen" /> | <img src="screenshots/01_home_screen.jpg" width="220" alt="Home Screen" /> | <img src="screenshots/02_movie_detail.jpg" width="220" alt="Movie Detail Screen" /> | <img src="screenshots/03_search_screen.jpg" width="220" alt="Search Screen" /> |
+| *Sign in, demo auto-fill & guest access* | *Featured carousel, genre chips & grid* | *Backdrop hero, metadata & cast* | *Debounced search & suggestions* |
 
 ---
 
@@ -28,6 +28,7 @@
 **FlickVault** is a cinema browsing mobile application designed with a dark, immersive aesthetic, fluid navigation, and clean architecture.
 
 The project demonstrates:
+- **Authentication & Session Handling**: Protected routing where users sign in before accessing the movie collection, with demo credentials, form validation, and session lifecycle management.
 - **UI/UX Craftsmanship**: Cinema dark mode theme, hero transitions, glassmorphic badges, category filter chips, and an auto-advancing featured carousel.
 - **Robust Data Layer**: Dual-source architecture supporting **both** rich offline sample data (10+ blockbusters with full overviews, cast, ratings, and backdrops) **and** live integration with **The Movie Database (TMDB) API**.
 - **Clean Architecture**: Strict separation of concerns (Models, Services, Repositories, Config, Widgets, Screens). No API keys are hardcoded in UI files.
@@ -35,9 +36,30 @@ The project demonstrates:
 
 ---
 
+## 🔑 Authentication & Session Handling
+
+The app enforces a clean authentication gate before accessing the movie catalog:
+- **🔐 Login & Registration**:
+  - Sign In and Create Account toggle tabs with email & password validation.
+  - Password visibility toggle (show/hide).
+  - Error banner displays for invalid credentials or malformed inputs.
+- **⚡ 1-Click Demo Fill Button**:
+  - Evaluators can tap **"Fill Demo Account (1-Click)"** to auto-populate test credentials without typing:
+    - **Email**: `demo@flickvault.com`
+    - **Password**: `password123`
+- **🚪 Guest Explorer Mode**:
+  - Direct 1-tap option **"Continue as Guest Explorer"** to inspect the app instantly.
+- **🔄 Session State & Logout**:
+  - `AuthRepository` broadcasts session changes via `ChangeNotifier`.
+  - Profile popup in the App Bar and dedicated Account card in Settings allow the user to **Sign Out** anytime, returning to the Login Screen.
+
+---
+
 ## ✨ Features
 
-### 1. 🏠 Home Screen
+### 1. 🏠 Home Screen (Post-Authentication)
+- **Personalized Header**:
+  - Welcomes the authenticated user with a greeting and avatar dropdown.
 - **Featured Trending Carousel**:
   - Horizontal swipeable hero banner highlighting top trending movies.
   - Smooth page indicator dots and auto-scroll timer.
@@ -79,6 +101,7 @@ The project demonstrates:
 - Error state with "Retry Search" button.
 
 ### 4. ⚙️ App & API Settings (Evaluator Friendly)
+- **Account & Session Card**: Displays active session user info with a **Sign Out** button.
 - **Data Source Switcher**: Toggle between **Offline Sample Movies** and **Live TMDB API** with a single tap.
 - **In-App API Key Configuration**: Evaluators can enter their own TMDB v3 API key directly within the app without touching code or recompiling.
 
@@ -86,13 +109,11 @@ The project demonstrates:
 
 ## 🏷️ GitHub Repository Metadata (About Section)
 
-To configure your GitHub repository **About** settings:
-
 - **Description**:
-  > A sleek, dark-themed cinema browsing Flutter mobile application with TMDB API integration, offline sample dataset, featured trending carousel, category filtering, and movie details. Built for GDG & DCS Recruitment Task.
+  > A sleek, dark-themed cinema browsing Flutter mobile application with authentication, session handling, TMDB API integration, offline sample dataset, featured carousel, category filtering, and movie details. Built for GDG & DCS Recruitment Task.
 
 - **Topics / Tags**:
-  `flutter` `dart` `mobile-app` `movie-app` `tmdb-api` `ui-ux` `gdg` `cross-platform` `android` `clean-architecture` `dribbble-design` `cinema`
+  `flutter` `dart` `authentication` `mobile-app` `movie-app` `tmdb-api` `ui-ux` `gdg` `cross-platform` `android` `clean-architecture` `dribbble-design` `cinema`
 
 ---
 
@@ -101,26 +122,30 @@ To configure your GitHub repository **About** settings:
 ```
 Movie_App_Design_Project/
 ├── screenshots/                     # UI screenshots of the working application
-│   ├── 01_home_screen.jpg
-│   ├── 02_movie_detail.jpg
-│   └── 03_search_screen.jpg
+│   ├── 00_login_screen.jpg          # Login & registration screen preview
+│   ├── 01_home_screen.jpg           # Home screen & featured carousel preview
+│   ├── 02_movie_detail.jpg          # Detailed movie view preview
+│   └── 03_search_screen.jpg         # Search screen preview
 ├── assets/
 │   └── data/
 │       └── sample_movies.json       # 10+ rich offline movie records with cast & media
 ├── lib/
-│   ├── main.dart                    # Application entry point & theme initialization
+│   ├── main.dart                    # App entry point, session gate & theme setup
 │   ├── config/
 │   │   ├── api_config.dart          # Decoupled TMDB URLs & API key management
 │   │   ├── app_constants.dart       # App strings, categories, and fallback assets
 │   │   └── app_theme.dart           # Custom dark cinema theme & color tokens
 │   ├── models/
+│   │   ├── user.dart                # User entity for session management
 │   │   ├── movie.dart               # Complete movie domain model with getters & JSON parser
 │   │   └── cast_member.dart         # Actor & character data model
 │   ├── services/
+│   │   ├── auth_service.dart        # Authentication service with demo accounts & validation
 │   │   ├── tmdb_api_service.dart    # Live HTTP client for TMDB with error handling & timeouts
 │   │   └── mock_movie_service.dart  # Offline asset loader with in-memory fallback
 │   ├── repositories/
-│   │   └── movie_repository.dart    # Repository pattern managing state, mode switching & favorites
+│   │   ├── auth_repository.dart     # Authentication state & session lifecycle manager
+│   │   └── movie_repository.dart    # Movie catalog state, mode switching & favorites
 │   ├── widgets/
 │   │   ├── movie_card.dart          # Card widget for movie grid
 │   │   ├── trending_carousel_card.dart # Featured banner card with gradient overlay
@@ -131,14 +156,16 @@ Movie_App_Design_Project/
 │   │   ├── section_header.dart      # Reusable section header
 │   │   └── cast_card.dart           # Circular actor portrait card
 │   └── screens/
+│       ├── login_screen.dart        # Login & registration authentication screen
 │       ├── home_screen.dart         # Main browsing screen
 │       ├── movie_detail_screen.dart # Detailed movie view with hero transitions
 │       ├── search_screen.dart       # Dedicated TMDB search screen
-│       └── settings_screen.dart     # API key configuration & data mode toggle
+│       └── settings_screen.dart     # API key configuration & session manager
 ├── test/
+│   ├── auth_test.dart               # Unit tests for authentication & session lifecycle
 │   ├── movie_model_test.dart        # Unit tests for JSON parsing & model helpers
-│   └── widget_test.dart             # Widget test for app initialization
-├── android/                         # Complete Android project wrapper with Internet permissions
+│   └── widget_test.dart             # Widget tests for app initialization & auth flow
+├── android/                         # Complete Android project wrapper with Gradle 8.5
 └── pubspec.yaml                     # Dependencies and asset declarations
 ```
 
@@ -166,15 +193,6 @@ flutter pub get
 ```bash
 flutter run
 ```
-
-> **Note on TMDB API Key**:  
-> The app runs **100% out of the box** using the built-in offline dataset (no API key required).  
-> To test live TMDB data, either:
-> 1. Pass the key at runtime:  
->    ```bash
->    flutter run --dart-define=TMDB_API_KEY=your_api_key_here
->    ```
-> 2. Or simply tap the **Settings icon (top right)** in the app and paste your TMDB v3 API Key!
 
 ---
 
@@ -218,6 +236,7 @@ build/app/outputs/flutter-apk/app-release.apk
 ---
 
 ## 📝 Submission Checklist
+- [x] **Authentication**: Login & Sign Up screens, session handling, 1-click demo fill, guest mode.
 - [x] **Source Code**: Pushed to public GitHub repository.
 - [x] **Screens**: Home Screen with carousel & grid + Movie Detail Screen with back navigation.
 - [x] **Images**: Movie posters, backdrops, and cast photos with placeholders and fallbacks.
