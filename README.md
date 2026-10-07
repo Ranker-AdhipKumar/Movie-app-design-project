@@ -9,11 +9,11 @@
 [![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen)](https://github.com/Ranker-AdhipKumar/Movie-app-design-project/actions)
 
 [![Download from GitHub](https://img.shields.io/badge/Download%20APK-GitHub%20Repo%20(Direct)-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ranker-AdhipKumar/Movie-app-design-project/raw/main/Direct_apk_file/app-release.apk)
-[![Direct Download APK](https://img.shields.io/badge/Download%20APK-Google%20Drive-FFB800?style=for-the-badge&logo=google-drive&logoColor=black)](https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing)
+[![Direct Download APK](https://img.shields.io/badge/Download%20APK-Google%20Drive-FFB800?style=for-the-badge&logo=google-drive&logoColor=black)](https://drive.google.com/file/d/1CTwMfOxiz7cH8CfD8EH0r4ViAU4Sj6Pb/view?usp=sharing)
 
 > 📲 **Directly Download the Demo APK:**  
 > - ⚡ **[Download from GitHub Repo (Direct_apk_file/app-release.apk)](https://github.com/Ranker-AdhipKumar/Movie-app-design-project/raw/main/Direct_apk_file/app-release.apk)**  
-> - ☁️ **[Download from Google Drive](https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing)**  
+> - ☁️ **[Download from Google Drive](https://drive.google.com/file/d/1CTwMfOxiz7cH8CfD8EH0r4ViAU4Sj6Pb/view?usp=sharing)**  
 
 ---
 
@@ -223,10 +223,10 @@ You can directly download and install the ready-to-use demo APK via either metho
 ---
 
 ### ☁️ Option 2: Download from Google Drive
-[![Download APK Button](https://img.shields.io/badge/📥%20Download-From%20Google%20Drive-FFB800?style=for-the-badge&logo=google-drive&logoColor=black)](https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing)
+[![Download APK Button](https://img.shields.io/badge/📥%20Download-From%20Google%20Drive-FFB800?style=for-the-badge&logo=google-drive&logoColor=black)](https://drive.google.com/file/d/1CTwMfOxiz7cH8CfD8EH0r4ViAU4Sj6Pb/view?usp=sharing)
 
 🔗 **Direct Google Drive Link**:  
-[https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing](https://drive.google.com/file/d/1_tk36fuYJRyhqM4PAVT-XjZOrVMJ-iVE/view?usp=sharing)
+[https://drive.google.com/file/d/1CTwMfOxiz7cH8CfD8EH0r4ViAU4Sj6Pb/view?usp=sharing](https://drive.google.com/file/d/1CTwMfOxiz7cH8CfD8EH0r4ViAU4Sj6Pb/view?usp=sharing)
 
 ---
 
